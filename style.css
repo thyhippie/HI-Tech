@@ -687,3 +687,379 @@ nav ul li a.quote-btn::after {
     }
 
 }
+
+/* =========================================================
+   MOBILE / RESPONSIVE FIXES
+   These overrides fix the desktop layout appearing clipped
+   or too wide on phones.
+   ========================================================= */
+
+/* Prevent any element from creating horizontal overflow */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Make common page wrappers fluid */
+.container,
+section,
+main {
+    max-width: 100%;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    nav ul {
+        gap: 18px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        min-height: 650px;
+        padding: 120px 30px 70px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 680px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 8vw, 65px);
+    }
+
+    .hero-description {
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 600px;
+    }
+
+    .services {
+        width: 100%;
+        padding: 70px 5%;
+    }
+
+    /* Supports the usual services-grid class used by the
+       service-card section. */
+    .services-grid {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .service-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .footer {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* ---------- HEADER ---------- */
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 82px;
+        height: auto;
+        padding: 8px 12px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo img {
+        width: auto;
+        max-width: 130px;
+        height: 48px;
+        object-fit: contain;
+    }
+
+    nav {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav ul {
+        width: max-content;
+        min-width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 13px;
+        padding: 0 4px;
+    }
+
+    nav ul li {
+        flex: 0 0 auto;
+    }
+
+    nav ul li a {
+        white-space: nowrap;
+        font-size: 10px;
+        padding: 5px 0;
+        letter-spacing: 0;
+    }
+
+    .quote-btn {
+        padding: 7px 11px !important;
+        font-size: 9px !important;
+        border-radius: 5px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        position: relative;
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        min-height: 600px;
+        margin: 0;
+        padding: 120px 20px 55px;
+        overflow: hidden;
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-content {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .hero-small {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(34px, 11vw, 48px);
+        line-height: 1.08;
+        overflow-wrap: break-word;
+    }
+
+    .hero-description {
+        width: 100%;
+        max-width: 100%;
+        margin: 18px auto 0;
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero-buttons a,
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: min(100%, 260px);
+        text-align: center;
+        padding: 13px 18px;
+        font-size: 13px;
+    }
+
+    .b2b-circle {
+        display: none !important;
+    }
+
+
+    /* ---------- SERVICE SECTION ---------- */
+
+    .services {
+        width: 100%;
+        max-width: 100%;
+        padding: 55px 14px;
+        overflow: hidden;
+    }
+
+    .services h2 {
+        max-width: 100%;
+        font-size: clamp(26px, 7vw, 38px);
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .services-grid,
+    .service-grid {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .service-card img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer {
+        width: 100%;
+        max-width: 100%;
+        padding: 48px 20px 20px;
+        margin-top: 30px;
+        overflow: hidden;
+    }
+
+    .footer-content {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr !important;
+        gap: 28px;
+    }
+
+    .footer-company img {
+        width: 150px;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .footer-company > p {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 30px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-hours p {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .header {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .logo img {
+        height: 44px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 9px;
+    }
+
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+        min-height: 560px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .services {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
