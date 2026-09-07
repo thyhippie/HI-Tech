@@ -1,0 +1,689 @@
+/* =========================================
+   HI TECH SAVVY'S ELECTRICAL
+   MAIN WEBSITE STYLES
+   ========================================= */
+
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* =========================================
+   GLOBAL
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background: #ffffff;
+    color: #00153d;
+}
+
+
+/* =========================================
+   TOP BAR
+   ========================================= */
+
+.top-bar {
+    background: #b7bac0;
+    color: white;
+    padding: 12px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 14px;
+}
+
+.top-left {
+    display: flex;
+    gap: 30px;
+}
+
+.top-right span {
+    color: #075dcc;
+}
+
+
+/* =========================================
+   HEADER / NAVBAR
+   ========================================= */
+
+.header {
+    height: 100px;
+
+    /* WHITE NAVBAR — MATCHES HOME PAGE */
+    background: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 7%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid #e2eaf5;
+
+    box-shadow: 0 4px 18px rgba(0, 21, 61, 0.08);
+}
+
+
+/* LOGO */
+
+.logo img {
+    height: 78px;
+    width: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 44px;
+
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: inline-block;
+
+    text-decoration: none;
+
+    /* NAVBAR TEXT */
+    color: #00153d;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+    letter-spacing: 0.02em;
+
+    padding: 10px 0;
+
+    position: relative;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* NAVBAR UNDERLINE */
+
+nav ul li a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 2px;
+
+    height: 2px;
+
+    background: #075dcc;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.2s ease;
+}
+
+
+/* HOVER */
+
+nav ul li a:hover {
+    color: #075dcc;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* ACTIVE PAGE */
+
+nav ul li a.active {
+    color: #075dcc;
+}
+
+nav ul li a.active::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================================
+   REQUEST A QUOTE BUTTON
+   ========================================= */
+
+.quote-btn {
+    background: #075dcc;
+
+    color: #ffffff !important;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 15px 30px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 8px 18px rgba(7, 93, 204, 0.20);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* REMOVE UNDERLINE FROM QUOTE BUTTON */
+
+nav ul li a.quote-btn::after {
+    display: none;
+}
+
+
+/* QUOTE BUTTON HOVER */
+
+.quote-btn:hover {
+    background: #004aa8;
+
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 22px rgba(7, 93, 204, 0.30);
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    background-image: url("images/hero-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-attachment: scroll;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    padding-left: 8%;
+}
+
+.hero-content {
+    max-width: 700px;
+
+    color: white;
+
+    z-index: 10;
+}
+
+.hero-small {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.hero-small span {
+    color: #0d6efd;
+}
+
+.hero h1 {
+    font-size: 85px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #0d6efd;
+}
+
+.hero-description {
+    margin-top: 30px;
+
+    font-size: 24px;
+
+    line-height: 1.8;
+
+    max-width: 650px;
+}
+
+.hero-buttons {
+    margin-top: 40px;
+
+    display: flex;
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.btn-primary {
+    background: #0d6efd;
+
+    color: white;
+
+    padding: 18px 35px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #004aa8;
+
+    transform: translateY(-2px);
+}
+
+
+.btn-secondary {
+    border: 2px solid white;
+
+    color: white;
+
+    padding: 18px 35px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #00153d;
+}
+
+
+/* =========================================
+   B2B CIRCLE
+   ========================================= */
+
+.b2b-circle {
+    position: absolute;
+
+    right: 18%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    border: 8px solid #0d6efd;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.b2b-circle h2 {
+    font-size: 70px;
+
+    color: #0d6efd;
+}
+
+.b2b-circle p {
+    font-size: 26px;
+
+    font-weight: 700;
+}
+
+.b2b-circle small {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   SERVICES
+   ========================================= */
+
+.services {
+    padding: 100px 7%;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    background: #00153d;
+
+    color: #fff;
+
+    padding: 64px 7% 24px;
+
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1.25fr;
+
+    gap: 42px;
+}
+
+.footer-company img {
+    display: block;
+
+    width: 180px;
+    height: 82px;
+
+    object-fit: contain;
+
+    object-position: left center;
+
+    background: #fff;
+
+    border-radius: 8px;
+
+    padding: 4px;
+
+    margin-bottom: 18px;
+}
+
+.footer p,
+.footer a {
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+    color: #b9c6dd;
+}
+
+.footer-company > p {
+    max-width: 32ch;
+
+    margin-bottom: 20px;
+}
+
+.footer h4 {
+    color: #fff;
+
+    font-size: 0.85rem;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    margin: 6px 0 18px;
+}
+
+.footer-contact,
+.footer-links,
+.footer-hours {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+}
+
+.footer a {
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: #f5b800;
+}
+
+.footer-cta {
+    display: inline-flex !important;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #0d6efd;
+
+    color: #fff !important;
+
+    padding: 11px 17px;
+
+    border-radius: 6px;
+
+    font-weight: 700;
+}
+
+.footer-cta:hover {
+    background: #3385f4;
+
+    color: #fff !important;
+}
+
+.footer-hours p {
+    display: flex;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    max-width: 210px;
+
+    margin: 0;
+}
+
+.footer-hours p span {
+    color: #fff;
+
+    margin-left: 15px;
+}
+
+.footer-hours strong {
+    color: #f5b800;
+
+    font-size: 0.85rem;
+
+    margin-top: 12px;
+}
+
+.footer-bottom {
+    max-width: 1280px;
+
+    margin: 48px auto 0;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+    font-size: 0.78rem;
+
+    color: #91a4c4;
+}
+
+
+/* =========================================
+   RESPONSIVE — TABLETS
+   ========================================= */
+
+@media (max-width: 1200px) {
+
+    .b2b-circle {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 20px;
+    }
+
+    .logo img {
+        height: 65px;
+    }
+
+    nav ul {
+        gap: 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .quote-btn {
+        padding: 12px 20px;
+    }
+
+    .hero {
+        padding: 50px 30px;
+
+        text-align: center;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================
+   FOOTER RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .footer {
+        padding-inline: 30px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .footer-bottom {
+        margin-top: 34px;
+
+        flex-direction: column;
+    }
+
+}
