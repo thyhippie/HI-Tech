@@ -5,7 +5,7 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    formData.append("access_key", "28585c47-5aca-44e7-a37f-e1919f518dda");
+    formData.append("access_key", "3343bd17-8da3-4a98-bd7a-cf1013f6243c");
 
     const originalText = submitBtn.textContent;
 
@@ -33,4 +33,4 @@ form.addEventListener('submit', async (e) => {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
     }
-})
+});
