@@ -158,8 +158,8 @@
   }
 })
 
-const form = document.getElementById('form');
-const submitBtn = form.querySelector('button[type="submit"]');
+const form = document.getElementById('qoute');
+const submitBtn = form.querySelector('button[type="Send qoute request"]');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
